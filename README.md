@@ -1,7 +1,7 @@
 # codepad
 Simple Online Python Code Editor Based on bottle-framework 
 
-**IT JUST A TOY (￣▽￣") **  
+**IT JUST A TOY (￣▽￣")**  
 
 ###Requirements  
 
