@@ -1,0 +1,8 @@
+"timeout": 60
+"rabbitmq":
+  "host": "10.0.88.176"
+  "username": "Haruna"
+  "password": "moegirl"
+  "queue_name": "queue"
+"docker":
+  "volume_path": "/home/sapphire/nayuki/core/volume/"

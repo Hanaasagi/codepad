@@ -1,0 +1,4 @@
+amqp==1.4.5
+bottle==0.12.10
+docker-py==1.10.5
+docker-pycreds==0.2.1

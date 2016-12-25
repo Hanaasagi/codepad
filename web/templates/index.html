@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <title>codepad</title>
+</head>
+<body>
+<div style="margin: 8px 8px 8px 8px">
+    <center>
+        <form action="" method="post" id="editor">
+            <table border="0" cellpadding="0" cellspacing="0" width="1%">
+                <tr>
+                    <td style="vertical-align: top" width="1%">
+                        <div class="editor" id="editor" >
+                            <textarea id="textarea" name="code" cols="80" rows="24" wrap="off"  spellcheck="false" style="color:#E86B79;background-color:#322C28;"></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">
+                        <input type="submit" name="submit" value="  Run  "/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</div>
+<script>
+    // Allow the usage of the tab key when typing in the code box, 
+    // rather than unfocusing the element.
+    var ta = document.getElementById('textarea');
+    ta.onkeydown = function(e) {
+        // if the key was the tab key, and the browser isn't so 
+        // prehistoric that it doesn't support selectionStart / selectionEnd
+        if (e.keyCode === 9 && typeof ta.selectionStart !== 'undefined') {
+            var startPosition = ta.selectionStart;
+            var endPosition = ta.selectionEnd;
+
+            // insert spaces
+            ta.value = (ta.value.substring(0, startPosition) + 
+                    '    ' + ta.value.substring(endPosition, ta.value.length));
+            // move the cursor to after the inserted spaces
+            ta.selectionStart = ta.selectionEnd = startPosition + 4;
+
+            // don't unfocus the textarea (the default behaviour of the tab key)
+            return false;
+        }
+    };
+</script>
+</body>
+</html>
+
+
+
+
+
+
